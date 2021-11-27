@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <EditText
+        android:id="@+id/qqpw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qqID"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="234dp"
+        android:layout_height="147dp"
+        android:contentDescription="TODO"
+        android:scrollbarStyle="insideInset"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/picci" />
+
+    <CheckBox
+        android:id="@+id/qqautologin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AutoLoginName"
+        app:layout_constraintBottom_toBottomOf="@+id/savepw"
+        app:layout_constraintEnd_toStartOf="@+id/savepw"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qqpw"
+        app:layout_constraintVertical_bias="0.217" />
+
+    <CheckBox
+        android:id="@+id/savepw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SavePWName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qqpw" />
+
+    <TextView
+        android:id="@+id/retrievepw"
+        android:layout_width="68dp"
+        android:layout_height="15dp"
+        android:text="@string/RetrievePWName"
+        app:layout_constraintBottom_toBottomOf="@+id/savepw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toEndOf="@+id/savepw"
+        app:layout_constraintTop_toBottomOf="@+id/qqpw"
+        app:layout_constraintVertical_bias="0.244" />
+
+    <EditText
+        android:id="@+id/qqID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="phone"
+        android:ems="10"
+        android:hint="@string/UserNumberTip"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+     />
+    <!--        android:HinttextColor="#FF0000"-->
+    <!--        android:hintTextColor="#757575"-->
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/LoginButtonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/savepw"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <RadioGroup
+        android:id="@+id/saveModeChoiceRadioGroup"
+        android:layout_width="225dp"
+        android:layout_height="155dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login">
+
+        <RadioButton
+            android:id="@+id/savetoISradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/saveToIS" />
+
+        <RadioButton
+            android:id="@+id/savetoESradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/saveToES" />
+
+        <RadioButton
+            android:id="@+id/savatoSPradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/saveToSP" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/saveModeChoiceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choicesavemode"
+        app:layout_constraintBottom_toTopOf="@+id/saveModeChoiceRadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/toBookFloatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="toBook"
+        android:tint="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.668"
+        app:srcCompat="@android:drawable/ic_menu_more"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

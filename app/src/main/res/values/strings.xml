@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">AndroidStudyApplication</string>
+    <string name="LoginButtonName">非安全登录</string>
+    <string name="AutoLoginName">自动登录</string>
+    <string name="SavePWName">保存密码</string>
+    <string name="RetrievePWName">找回密码</string>
+    <string name="UserNumberTip">QQ号/邮箱/手机</string>
+    <string name="qq_welcome_text">欢迎来到FakeQQ</string>
+    <string name="AddButtonName">加入购物车</string>
+    <string name="choicesavemode">选择存储方式</string>
+    <string name="saveToIS">内部存储</string>
+    <string name="saveToES">外部存储</string>
+    <string name="saveToSP">通过SP存储</string>
+    <string name="toBookTextView">查看账本</string>
+    <string name="bookShowNameTextView">交易时间：</string>
+    <string name="bookShowTelTextView">交易金额：</string>
+    <string name="AmountInputTips">输入金额</string>
+    <string name="TimeInputTips">(留空自动获取当前时间)</string>
+    <string name="addDataButton">添加</string>
+    <string name="queryDataButton">查询</string>
+    <string name="deleteDataButton">删除</string>
+    <string name="updateDataButton">修改</string>
+    <string name="choiceTypeSpinner">选择类目：</string>
+    <string name="myBookName">小二记账本</string>
+    <string name="categoryRemarkTextView">交易内容：</string>
+    <string name="categoryRemark">交易备忘</string>
+    <string name="PageNumber">页码</string>
+    <string name="pageReduceButton"><![CDATA[<]]></string>
+    <string name="pageAddButton"><![CDATA[>]]></string>
+    <string name="saveChangeButtonText">保存修改</string>
+    <string name="changeCancelButtonText">取消修改</string>
+
+</resources>

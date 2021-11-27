@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <EditText
+        android:id="@+id/timeEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/TimeInputTips"
+        android:importantForAutofill="no"
+        android:inputType="datetime|text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.721"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookNameTextView"
+        tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/categoryTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/bookShowNameTextView"
+        android:text="@string/bookShowNameTextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/timeEditText"
+        app:layout_constraintEnd_toStartOf="@+id/timeEditText"
+        app:layout_constraintTop_toTopOf="@+id/timeEditText"
+        app:layout_constraintVertical_bias="0.476"
+        tools:text="@string/bookShowNameTextView" />
+
+    <EditText
+        android:id="@+id/accountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="184dp"
+        android:ems="10"
+        android:hint="@string/AmountInputTips"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned|numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.721"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeEditText"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+    <Spinner
+        android:id="@+id/choiceTypeSpinner"
+        android:layout_width="211dp"
+        android:layout_height="31dp"
+        android:entries="@array/categoryType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accountEditText"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/bookTelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bookShowTelTextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/accountEditText"
+        app:layout_constraintEnd_toStartOf="@+id/accountEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/categoryTimeTextView"
+        app:layout_constraintTop_toTopOf="@+id/accountEditText"
+        app:layout_constraintVertical_bias="0.238" />
+
+    <TextView
+        android:id="@+id/choiceTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choiceTypeSpinner"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/choiceTypeSpinner"
+        app:layout_constraintStart_toStartOf="@+id/bookTelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/accountEditText"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="352dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryRemarkText">
+
+        <Button
+            android:id="@+id/addDataButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addDataButton"
+            tools:layout_editor_absoluteX="116dp"
+            tools:layout_editor_absoluteY="140dp" />
+
+        <Button
+            android:id="@+id/queryDataButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/queryDataButton"
+            tools:layout_editor_absoluteY="145dp" />
+
+        <Button
+            android:id="@+id/deleteDataButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deleteDataButton"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <Button
+            android:id="@+id/updateDataButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/updateDataButton"
+            tools:layout_editor_absoluteX="223dp"
+            tools:layout_editor_absoluteY="145dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bookNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/myBookName"
+        android:textColor="@color/teal_200"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/remarkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/categoryRemarkTextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryRemarkText"
+        app:layout_constraintStart_toStartOf="@+id/choiceTypeTextView"
+        app:layout_constraintTop_toTopOf="@+id/categoryRemarkText" />
+
+    <EditText
+        android:id="@+id/categoryRemarkText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/categoryRemark"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/accountEditText"
+        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintStart_toEndOf="@+id/bookTelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/choiceTypeSpinner"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/outTextView"
+        android:layout_width="384dp"
+        android:layout_height="249dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <Button
+        android:id="@+id/pageReduceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/pageReduceButton"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/pageAddButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/pageAddButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pageAddButton"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toEndOf="@+id/pageReduceButton"
+        app:layout_constraintTop_toBottomOf="@+id/outTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/pageNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="页码"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/pageAddButton"
+        app:layout_constraintEnd_toStartOf="@+id/pageAddButton"
+        app:layout_constraintStart_toEndOf="@+id/pageReduceButton"
+        app:layout_constraintTop_toTopOf="@+id/pageAddButton" />
+
+    <Button
+        android:id="@+id/saveChangeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saveChangeButtonText"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.646"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryRemarkText"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <Button
+        android:id="@+id/saveCancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="@string/changeCancelButtonText"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/saveChangeButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/saveChangeButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
