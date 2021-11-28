@@ -180,6 +180,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             SkipMark = true;
             editor.putInt("saveMode",saveMode);
             editor.commit();
+            SharedPreferences sp_a = getSharedPreferences("ActivityMode",MODE_PRIVATE);
+            SharedPreferences.Editor editor_a  =  sp.edit();
+            editor_a.putBoolean("ActivityMode",true);
+            editor_a.commit();
+            Toast.makeText(this, "软件已激活！", Toast.LENGTH_SHORT).show();
         }
             AlertDialog dialog;
         Boolean finalSkipMark = SkipMark;

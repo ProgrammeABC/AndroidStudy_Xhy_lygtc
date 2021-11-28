@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -43,13 +45,22 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
     private Spinner categoryList;
     private String version = "v0.0.09beta";
     private String Welcome = "欢迎使用小二记账本"+version+"!";
+    private Boolean Activity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book);
-        DataBaseHelper = new MyAppDBHelper(this);
-        init();
-        outText.setText(Welcome);
+        SharedPreferences sp = getSharedPreferences("ActivityMode",MODE_PRIVATE);
+        Activity = sp.getBoolean("Activity",false);
+        if(Activity) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_book);
+            DataBaseHelper = new MyAppDBHelper(this);
+            init();
+            outText.setText(Welcome);
+        } else {
+            Toast.makeText(this, "请先激活软件！", Toast.LENGTH_SHORT).show();
+            Intent GotoActivity = new Intent(BookActivity.this,MainActivity.class);
+            startActivity(GotoActivity);
+        }
     }
     private void init(){
         timeText =  findViewById(R.id.timeEditText);
@@ -298,8 +309,7 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
             break;
             case R.id.saveChangeButton:
                 update(temp_up);
-                button_show();
-                temp_up = "";
+                button_show();                temp_up = "";
 //                outText.setText(Welcome);
             break;
             case R.id.saveCancelButton:
