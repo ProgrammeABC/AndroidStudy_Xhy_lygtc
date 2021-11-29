@@ -29,5 +29,9 @@
     <string name="pageAddButton"><![CDATA[>]]></string>
     <string name="saveChangeButtonText">保存修改</string>
     <string name="changeCancelButtonText">取消修改</string>
+    <string name="timeText">00:00:00.00</string>
+    <string name="startAndCountButtonText">开始计时</string>
+    <string name="clearButtonText">重新开始</string>
+    <string name="outTextvView">计时记录:</string>
 
 </resources>

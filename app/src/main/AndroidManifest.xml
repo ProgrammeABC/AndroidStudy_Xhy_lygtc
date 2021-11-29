@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello">
         <activity
+            android:name=".MultithreadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ContentActivity"
+            android:exported="false" />
+        <activity
             android:name=".ContentProviderActivity"
             android:exported="false" />
         <activity

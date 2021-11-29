@@ -4,16 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class fruitshop extends AppCompatActivity {
+public class fruitshop extends AppCompatActivity{
     private RecyclerView fruitList;
     private HomeAdapter fruitAdapter;
+
     private String [] names = {"coreA7","Ryzen-S9","code8-86","cool-007","fire-696","water-789"};
     private int [] icon = {R.drawable.cpu1,R.drawable.cpu2,R.drawable.cpu3,R.drawable.cpu4,R.drawable.cpu5,R.drawable.cpu6};
     private String [] details = {"intel","AMD","NUll","NULL2","NULL3","NULL4"};
@@ -22,11 +25,14 @@ public class fruitshop extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fruitshop);
+
         fruitList =(RecyclerView) findViewById(R.id.fruitlist);
         fruitList.setLayoutManager(new LinearLayoutManager(this));
         fruitAdapter = new HomeAdapter();
         fruitList.setAdapter(fruitAdapter);
     }
+
+
     class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> {
         @Override
         public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType){

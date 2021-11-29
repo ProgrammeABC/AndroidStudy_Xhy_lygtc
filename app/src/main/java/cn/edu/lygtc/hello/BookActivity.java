@@ -50,6 +50,7 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         SharedPreferences sp = getSharedPreferences("ActivityMode",MODE_PRIVATE);
         Activity = sp.getBoolean("Activity",false);
+//        Toast.makeText(this, "Activity"+Activity, Toast.LENGTH_SHORT).show();
         if(Activity) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_book);

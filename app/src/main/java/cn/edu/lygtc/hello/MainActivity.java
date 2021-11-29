@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(isChecked)
                     saveMode = 1;
                 textMode = "saveMode="+saveMode;
-                Toast.makeText(MainActivity.this,textMode,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this,textMode,Toast.LENGTH_SHORT).show();
             }
         });
         saveToES.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(isChecked)
                     saveMode = 2;
                 textMode = "saveMode="+saveMode;
-                Toast.makeText(MainActivity.this,textMode,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this,textMode,Toast.LENGTH_SHORT).show();
             }
         });
         saveToSP.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(isChecked)
                     saveMode = 0;
                 textMode = "saveMode="+saveMode;
-                Toast.makeText(MainActivity.this,textMode,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this,textMode,Toast.LENGTH_SHORT).show();
             }
         });
         if (sp.contains("saveMode")) {
@@ -111,9 +111,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case 2:{
 
                 Map<String,String> LoginInf = getLoginInf();
-                Toast.makeText(this,"方式2"+LoginInf.get("qqID"),Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this,"方式2"+LoginInf.get("qqID"),Toast.LENGTH_SHORT).show();
                 if (LoginInf != null){
-                    Toast.makeText(this,"duqucg",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"duqucg",Toast.LENGTH_SHORT).show();
                     qqID.setText(LoginInf.get("qqID"));
                     qqPW.setText(LoginInf.get("qqPW"));
                     saveToES.setChecked(true);
@@ -175,14 +175,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             }
-            Toast.makeText(this,"UnSaved",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this,"UnSaved",Toast.LENGTH_SHORT).show();
             tips="用户名和密码校验成功！登陆成功！"+qqID_TS+"欢迎！"+saveMode;
             SkipMark = true;
             editor.putInt("saveMode",saveMode);
             editor.commit();
             SharedPreferences sp_a = getSharedPreferences("ActivityMode",MODE_PRIVATE);
-            SharedPreferences.Editor editor_a  =  sp.edit();
-            editor_a.putBoolean("ActivityMode",true);
+            SharedPreferences.Editor editor_a  =  sp_a.edit();
+            editor_a.putBoolean("Activity",true);
             editor_a.commit();
             Toast.makeText(this, "软件已激活！", Toast.LENGTH_SHORT).show();
         }
@@ -247,7 +247,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 content = br.readLine();
                 Map<String,String> userMap = new HashMap<String,String>();
                 String[] infos = content.split(":");
-                Toast.makeText(MainActivity.this,"尝试读取成功"+infos[0],Toast.LENGTH_LONG).show();
+//                Toast.makeText(MainActivity.this,"尝试读取成功"+infos[0],Toast.LENGTH_LONG).show();
                 userMap.put("qqID",infos[0]);
                 userMap.put("qqPW",infos[1]);
                 return userMap;
