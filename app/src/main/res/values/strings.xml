@@ -33,5 +33,8 @@
     <string name="startAndCountButtonText">开始计时</string>
     <string name="clearButtonText">重新开始</string>
     <string name="outTextvView">计时记录:</string>
+    <string name="mtTitleTW">多线程练习·最大值查找</string>
+    <string name="mtInputTipsTW">请输入一组整数(以\"-\"隔开)：</string>
+    <string name="mtCountButtonText">查找最大值</string>
 
 </resources>

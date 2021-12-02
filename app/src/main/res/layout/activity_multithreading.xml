@@ -6,52 +6,104 @@
     android:layout_height="match_parent"
     tools:context=".MultithreadingActivity">
 
+<!--    <TextView-->
+<!--        android:id="@+id/countTimeTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/timeText"-->
+<!--        android:textSize="34sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.092" />-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ButtonLayout"-->
+<!--        android:layout_width="391dp"-->
+<!--        android:layout_height="55dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.729">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/StartAndCountbutton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="@string/startAndCountButtonText" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/ClearButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="@string/clearButtonText" />-->
+<!--    </LinearLayout>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/eTimeTextView"-->
+<!--        android:layout_width="406dp"-->
+<!--        android:layout_height="170dp"-->
+<!--        android:text="@string/outTextvView"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/ButtonLayout"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/countTimeTextView" />-->
+<!--    上面的是计时器的布局-->
     <TextView
-        android:id="@+id/countTimeTextView"
+        android:id="@+id/mtTitleTextView"
+        android:layout_width="276dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/mtTitleTW"
+        android:textAlignment="center"
+        android:textColor="@color/teal_200"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mtInputTipsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/timeText"
-        android:textSize="34sp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/mtInputTipsTW"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/mtInputEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/mtInputEditText"
+        android:layout_width="343dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="132dp"
+        android:ems="10"
+        android:hint="@string/mtInputTipsTW"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mtTitleTextView"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/mtCountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mtCountButtonText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/ButtonLayout"
-        android:layout_width="391dp"
-        android:layout_height="55dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.729">
-
-        <Button
-            android:id="@+id/StartAndCountbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/startAndCountButtonText" />
-
-        <Button
-            android:id="@+id/ClearButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/clearButtonText" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="406dp"
-        android:layout_height="170dp"
-        android:text="@string/outTextvView"
-        app:layout_constraintBottom_toTopOf="@+id/ButtonLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countTimeTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

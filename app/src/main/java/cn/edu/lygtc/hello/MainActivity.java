@@ -123,7 +123,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     public void toBook(View v){
-        Intent BookIntent = new Intent(this,BookActivity.class);
+//        Intent BookIntent = new Intent(this,BookActivity.class);
+        Intent BookIntent = new Intent(this,MultithreadingActivity.class);
         startActivity(BookIntent);
     }
     @Override
